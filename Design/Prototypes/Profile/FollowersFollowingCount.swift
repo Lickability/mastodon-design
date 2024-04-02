@@ -11,14 +11,9 @@ struct FollowersFollowingCount: View {
     let count: Int
     let text: String
     
-    var formattedNumber: String {
-        let numberFormatter = NumberAbbreviationFormatter()
-        return numberFormatter.string(for: count) ?? "0"
-    }
-    
     var body: some View {
         NavigationLink { } label: {
-            Text(formattedNumber).bold() + Text(" " + text).foregroundStyle(.secondary)
+            Text(compactNumber(count)).bold() + Text(" " + text).foregroundStyle(.secondary)
         }
         .foregroundStyle(.primary)
     }

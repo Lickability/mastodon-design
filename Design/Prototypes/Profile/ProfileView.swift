@@ -23,7 +23,7 @@ struct ProfileView: View {
                         .clipped()
                         .padding(.horizontal, -16)
                     HStack(alignment: .bottom, spacing: 16) {
-                        ZeroHeightAvatarView(Image("Avatar23Still"))
+                        ZeroHeightAvatarView(Image("avatar"))
                         UsernameLockup()
                     }
                     .padding(.horizontal)

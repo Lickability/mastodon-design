@@ -16,17 +16,22 @@ enum Prototype: String, CaseIterable, Identifiable, CustomStringConvertible {
     }
     
     case profile = "Profile"
+    case timelineNavBar = "Timeline Nav Bar"
     
     @ViewBuilder @MainActor var view: some View {
         switch self {
         case .profile:
             ProfileView()
+        case .timelineNavBar:
+            TimelineNavBar()
         }
     }
         
     var displayStyle: DisplayStyle {
         switch self {
         case .profile:
+            return .fullScreenCover
+        case .timelineNavBar:
             return .fullScreenCover
         }
     }

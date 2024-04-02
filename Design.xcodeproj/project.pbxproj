@@ -25,6 +25,16 @@
 		2C839D092BB4A81C0007056E /* SwiftUIIntrospect-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 2C839D082BB4A81C0007056E /* SwiftUIIntrospect-Dynamic */; };
 		2C839D0B2BB4A81C0007056E /* SwiftUIIntrospect-Static in Frameworks */ = {isa = PBXBuildFile; productRef = 2C839D0A2BB4A81C0007056E /* SwiftUIIntrospect-Static */; };
 		2C839D0D2BB4AB3B0007056E /* Prototype.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C839D0C2BB4AB3B0007056E /* Prototype.swift */; };
+		EA0578062BB5EAC0004985E8 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0578052BB5EAC0004985E8 /* PostModel.swift */; };
+		EA0578082BB5F218004985E8 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0578072BB5F218004985E8 /* SampleData.swift */; };
+		EA3EA11A2BB5B98600A02C69 /* MediaGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3EA1192BB5B98600A02C69 /* MediaGrid.swift */; };
+		EA3EA11C2BB5DD8300A02C69 /* ActionButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3EA11B2BB5DD8300A02C69 /* ActionButtons.swift */; };
+		EA3EA11E2BB5E00200A02C69 /* BoostHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3EA11D2BB5E00200A02C69 /* BoostHeader.swift */; };
+		EA3EA1212BB5E3F800A02C69 /* Pow in Frameworks */ = {isa = PBXBuildFile; productRef = EA3EA1202BB5E3F800A02C69 /* Pow */; };
+		EA983B652BB4DC3600D75AE2 /* TimelinePostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA983B642BB4DC3600D75AE2 /* TimelinePostCell.swift */; };
+		EA983B672BB4DC4D00D75AE2 /* AuthorHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA983B662BB4DC4C00D75AE2 /* AuthorHeader.swift */; };
+		EADBCD292BB4B361008D5BAB /* TimelineNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADBCD282BB4B361008D5BAB /* TimelineNavBar.swift */; };
+		EADBCD2B2BB4B37C008D5BAB /* TimelinePillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADBCD2A2BB4B37C008D5BAB /* TimelinePillView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +54,15 @@
 		2C839D012BB4A78D0007056E /* NumberAbbreviationFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberAbbreviationFormatter.swift; sourceTree = "<group>"; };
 		2C839D032BB4A7ED0007056E /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		2C839D0C2BB4AB3B0007056E /* Prototype.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prototype.swift; sourceTree = "<group>"; };
+		EA0578052BB5EAC0004985E8 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		EA0578072BB5F218004985E8 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		EA3EA1192BB5B98600A02C69 /* MediaGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaGrid.swift; sourceTree = "<group>"; };
+		EA3EA11B2BB5DD8300A02C69 /* ActionButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtons.swift; sourceTree = "<group>"; };
+		EA3EA11D2BB5E00200A02C69 /* BoostHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostHeader.swift; sourceTree = "<group>"; };
+		EA983B642BB4DC3600D75AE2 /* TimelinePostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelinePostCell.swift; sourceTree = "<group>"; };
+		EA983B662BB4DC4C00D75AE2 /* AuthorHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorHeader.swift; sourceTree = "<group>"; };
+		EADBCD282BB4B361008D5BAB /* TimelineNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineNavBar.swift; sourceTree = "<group>"; };
+		EADBCD2A2BB4B37C008D5BAB /* TimelinePillView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelinePillView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +71,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C839D072BB4A81C0007056E /* SwiftUIIntrospect in Frameworks */,
+				EA3EA1212BB5E3F800A02C69 /* Pow in Frameworks */,
 				2C839D092BB4A81C0007056E /* SwiftUIIntrospect-Dynamic in Frameworks */,
 				2C839D0B2BB4A81C0007056E /* SwiftUIIntrospect-Static in Frameworks */,
 			);
@@ -82,6 +102,7 @@
 				2C839CE02BB4A6100007056E /* DesignApp.swift */,
 				2C839D0C2BB4AB3B0007056E /* Prototype.swift */,
 				2C839CE22BB4A6100007056E /* PrototypesList.swift */,
+				EA0578042BB5EAB4004985E8 /* Model */,
 				2C839D002BB4A7840007056E /* Shared */,
 				2C839CEE2BB4A6420007056E /* Prototypes */,
 				2C839CE42BB4A6110007056E /* Assets.xcassets */,
@@ -101,6 +122,7 @@
 		2C839CEE2BB4A6420007056E /* Prototypes */ = {
 			isa = PBXGroup;
 			children = (
+				EADBCD272BB4B340008D5BAB /* TimelineNavBar */,
 				2C839CEF2BB4A7580007056E /* Profile */,
 			);
 			path = Prototypes;
@@ -126,8 +148,39 @@
 			isa = PBXGroup;
 			children = (
 				2C839D012BB4A78D0007056E /* NumberAbbreviationFormatter.swift */,
+				EA983B632BB4DC2B00D75AE2 /* TimelinePostCell */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		EA0578042BB5EAB4004985E8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA0578052BB5EAC0004985E8 /* PostModel.swift */,
+				EA0578072BB5F218004985E8 /* SampleData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EA983B632BB4DC2B00D75AE2 /* TimelinePostCell */ = {
+			isa = PBXGroup;
+			children = (
+				EA983B642BB4DC3600D75AE2 /* TimelinePostCell.swift */,
+				EA3EA1192BB5B98600A02C69 /* MediaGrid.swift */,
+				EA3EA11D2BB5E00200A02C69 /* BoostHeader.swift */,
+				EA3EA11B2BB5DD8300A02C69 /* ActionButtons.swift */,
+				EA983B662BB4DC4C00D75AE2 /* AuthorHeader.swift */,
+			);
+			path = TimelinePostCell;
+			sourceTree = "<group>";
+		};
+		EADBCD272BB4B340008D5BAB /* TimelineNavBar */ = {
+			isa = PBXGroup;
+			children = (
+				EADBCD2A2BB4B37C008D5BAB /* TimelinePillView.swift */,
+				EADBCD282BB4B361008D5BAB /* TimelineNavBar.swift */,
+			);
+			path = TimelineNavBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +203,7 @@
 				2C839D062BB4A81C0007056E /* SwiftUIIntrospect */,
 				2C839D082BB4A81C0007056E /* SwiftUIIntrospect-Dynamic */,
 				2C839D0A2BB4A81C0007056E /* SwiftUIIntrospect-Static */,
+				EA3EA1202BB5E3F800A02C69 /* Pow */,
 			);
 			productName = Design;
 			productReference = 2C839CDD2BB4A6100007056E /* Design.app */;
@@ -181,6 +235,7 @@
 			mainGroup = 2C839CD42BB4A6100007056E;
 			packageReferences = (
 				2C839D052BB4A81C0007056E /* XCRemoteSwiftPackageReference "swiftui-introspect" */,
+				EA3EA11F2BB5E3F700A02C69 /* XCRemoteSwiftPackageReference "Pow" */,
 			);
 			productRefGroup = 2C839CDE2BB4A6100007056E /* Products */;
 			projectDirPath = "";
@@ -208,18 +263,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EADBCD2B2BB4B37C008D5BAB /* TimelinePillView.swift in Sources */,
 				2C839CF62BB4A7730007056E /* FollowersFollowingCount.swift in Sources */,
 				2C839CF52BB4A7730007056E /* PickerChipView.swift in Sources */,
+				EA3EA11C2BB5DD8300A02C69 /* ActionButtons.swift in Sources */,
+				EADBCD292BB4B361008D5BAB /* TimelineNavBar.swift in Sources */,
 				2C839CFD2BB4A77B0007056E /* ChipsViewModel.swift in Sources */,
 				2C839D022BB4A78D0007056E /* NumberAbbreviationFormatter.swift in Sources */,
 				2C839D042BB4A7ED0007056E /* ProfileView.swift in Sources */,
+				EA3EA11E2BB5E00200A02C69 /* BoostHeader.swift in Sources */,
+				EA3EA11A2BB5B98600A02C69 /* MediaGrid.swift in Sources */,
+				EA0578062BB5EAC0004985E8 /* PostModel.swift in Sources */,
 				2C839D0D2BB4AB3B0007056E /* Prototype.swift in Sources */,
 				2C839CFC2BB4A77B0007056E /* ProfileChipData.swift in Sources */,
 				2C839CE32BB4A6100007056E /* PrototypesList.swift in Sources */,
+				EA983B672BB4DC4D00D75AE2 /* AuthorHeader.swift in Sources */,
 				2C839CFE2BB4A77B0007056E /* ChipView.swift in Sources */,
 				2C839CF72BB4A7730007056E /* UsernameLockup.swift in Sources */,
 				2C839CFF2BB4A77B0007056E /* PickerTest.swift in Sources */,
 				2C839CF42BB4A7730007056E /* ZeroHeightAvatarView.swift in Sources */,
+				EA0578082BB5F218004985E8 /* SampleData.swift in Sources */,
+				EA983B652BB4DC3600D75AE2 /* TimelinePostCell.swift in Sources */,
 				2C839CE12BB4A6100007056E /* DesignApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -354,7 +418,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Design/Preview Content\"";
-				DEVELOPMENT_TEAM = 5Z4GVSS33P;
+				DEVELOPMENT_TEAM = JL4AKR8DVC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -383,7 +447,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Design/Preview Content\"";
-				DEVELOPMENT_TEAM = 5Z4GVSS33P;
+				DEVELOPMENT_TEAM = JL4AKR8DVC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -436,6 +500,14 @@
 				minimumVersion = 1.1.3;
 			};
 		};
+		EA3EA11F2BB5E3F700A02C69 /* XCRemoteSwiftPackageReference "Pow" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/movingparts-io/Pow";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -453,6 +525,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2C839D052BB4A81C0007056E /* XCRemoteSwiftPackageReference "swiftui-introspect" */;
 			productName = "SwiftUIIntrospect-Static";
+		};
+		EA3EA1202BB5E3F800A02C69 /* Pow */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA3EA11F2BB5E3F700A02C69 /* XCRemoteSwiftPackageReference "Pow" */;
+			productName = Pow;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

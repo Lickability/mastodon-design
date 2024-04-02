@@ -1,6 +1,15 @@
 {
-  "originHash" : "ae5e02cef01b592ed851f6644be40e9c175d0598fe2c4f38163c0473370d4414",
+  "originHash" : "404c193c723d29ada4d4481dcdffb69b79b183b7f55d20a7b7d1630fbe813885",
   "pins" : [
+    {
+      "identity" : "pow",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/movingparts-io/Pow",
+      "state" : {
+        "revision" : "cc014eba4b65f689cadc281ad925de5607f2adc9",
+        "version" : "1.0.3"
+      }
+    },
     {
       "identity" : "swiftui-introspect",
       "kind" : "remoteSourceControl",
