@@ -8,7 +8,7 @@
 import SwiftUI
 
 enum TimelinePillReason: String, CaseIterable, Identifiable {
-    case newPosts, postSuccess
+    case newPosts, postSuccess, offline
     
     var id: Self { self }
     
@@ -18,6 +18,8 @@ enum TimelinePillReason: String, CaseIterable, Identifiable {
             return ("New Posts", "chevron.up", .accent)
         case .postSuccess:
             return ("Post Sent", "checkmark", .green)
+        case .offline:
+            return ("Offline", "bolt.horizontal.fill", .gray)
         }
     }
 }
