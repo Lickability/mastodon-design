@@ -25,7 +25,7 @@ struct TimelinePostCell: View {
                     AuthorHeader()
                     Text("Exercitation esse ut culpa laboris voluptate ut cupidatat qui sunt tempor. Exercitation dolore anim quis dolore ut aliquip aute deserunt reprehenderit.")
                         .font(.callout)
-                    MediaGrid()
+//                    MediaGrid()
                     ActionButtons()
                         .padding(.vertical, 4)
                 }

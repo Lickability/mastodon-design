@@ -14,22 +14,19 @@ extension TimelinePostCell {
         
         var body: some View {
             HStack(alignment: .center) {
-                PostActionButton(actionType: .reply(count: viewModel.repliesCount)) {
-                    viewModel.addReply()
-                }
-                Spacer()
-                PostActionButton(actionType: .boost(count: viewModel.boosts, isSelected: viewModel.isBoosted)) {
-                    viewModel.toggleBoost()
-                }
-                Spacer()
-                PostActionButton(actionType: .favorite(count: viewModel.favorites, isSelected: viewModel.isFavorited)) {
-                    viewModel.toggleFavorite()
+                HStack(spacing: 24) {
+                    PostActionButton(actionType: .reply(count: viewModel.repliesCount)) {
+                        viewModel.addReply()
+                    }
+                    PostActionButton(actionType: .boost(count: viewModel.boosts, isSelected: viewModel.isBoosted)) {
+                        viewModel.toggleBoost()
+                    }
+                    PostActionButton(actionType: .favorite(count: viewModel.favorites, isSelected: viewModel.isFavorited)) {
+                        viewModel.toggleFavorite()
+                    }
                 }
                 Spacer()
                 PostActionButton(actionType: .share, action: nil)
-                Spacer()
-                Spacer()
-                Button("More", systemImage: "ellipsis") {}
             }
             .labelStyle(.iconOnly)
             .foregroundStyle(.secondary)
@@ -69,10 +66,7 @@ struct PostActionButton: View {
                     }
                     .font(.footnote)
                 case .share:
-                    Text("000")
-                        .fontWeight(.semibold)
-                        .hidden()
-                        .font(.footnote)
+                    EmptyView()
                 }
             }
             .fontWeight(weight)

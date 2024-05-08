@@ -35,6 +35,8 @@
 		EA983B672BB4DC4D00D75AE2 /* AuthorHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA983B662BB4DC4C00D75AE2 /* AuthorHeader.swift */; };
 		EADBCD292BB4B361008D5BAB /* TimelineNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADBCD282BB4B361008D5BAB /* TimelineNavBar.swift */; };
 		EADBCD2B2BB4B37C008D5BAB /* TimelinePillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADBCD2A2BB4B37C008D5BAB /* TimelinePillView.swift */; };
+		EADC79CF2BCEF4EE0093C51D /* PostDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADC79CE2BCEF4EE0093C51D /* PostDetailView.swift */; };
+		EAE41D6D2BC597B3004256D9 /* Text+Collapsible.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE41D6C2BC597B3004256D9 /* Text+Collapsible.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +65,8 @@
 		EA983B662BB4DC4C00D75AE2 /* AuthorHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorHeader.swift; sourceTree = "<group>"; };
 		EADBCD282BB4B361008D5BAB /* TimelineNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineNavBar.swift; sourceTree = "<group>"; };
 		EADBCD2A2BB4B37C008D5BAB /* TimelinePillView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelinePillView.swift; sourceTree = "<group>"; };
+		EADC79CE2BCEF4EE0093C51D /* PostDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailView.swift; sourceTree = "<group>"; };
+		EAE41D6C2BC597B3004256D9 /* Text+Collapsible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Collapsible.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +126,7 @@
 		2C839CEE2BB4A6420007056E /* Prototypes */ = {
 			isa = PBXGroup;
 			children = (
+				EADC79CD2BCEF4E00093C51D /* PostDetail */,
 				EADBCD272BB4B340008D5BAB /* TimelineNavBar */,
 				2C839CEF2BB4A7580007056E /* Profile */,
 			);
@@ -148,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				2C839D012BB4A78D0007056E /* NumberAbbreviationFormatter.swift */,
+				EAE41D6C2BC597B3004256D9 /* Text+Collapsible.swift */,
 				EA983B632BB4DC2B00D75AE2 /* TimelinePostCell */,
 			);
 			path = Shared;
@@ -181,6 +187,14 @@
 				EADBCD282BB4B361008D5BAB /* TimelineNavBar.swift */,
 			);
 			path = TimelineNavBar;
+			sourceTree = "<group>";
+		};
+		EADC79CD2BCEF4E00093C51D /* PostDetail */ = {
+			isa = PBXGroup;
+			children = (
+				EADC79CE2BCEF4EE0093C51D /* PostDetailView.swift */,
+			);
+			path = PostDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +280,7 @@
 				EADBCD2B2BB4B37C008D5BAB /* TimelinePillView.swift in Sources */,
 				2C839CF62BB4A7730007056E /* FollowersFollowingCount.swift in Sources */,
 				2C839CF52BB4A7730007056E /* PickerChipView.swift in Sources */,
+				EADC79CF2BCEF4EE0093C51D /* PostDetailView.swift in Sources */,
 				EA3EA11C2BB5DD8300A02C69 /* ActionButtons.swift in Sources */,
 				EADBCD292BB4B361008D5BAB /* TimelineNavBar.swift in Sources */,
 				2C839CFD2BB4A77B0007056E /* ChipsViewModel.swift in Sources */,
@@ -279,6 +294,7 @@
 				2C839CE32BB4A6100007056E /* PrototypesList.swift in Sources */,
 				EA983B672BB4DC4D00D75AE2 /* AuthorHeader.swift in Sources */,
 				2C839CFE2BB4A77B0007056E /* ChipView.swift in Sources */,
+				EAE41D6D2BC597B3004256D9 /* Text+Collapsible.swift in Sources */,
 				2C839CF72BB4A7730007056E /* UsernameLockup.swift in Sources */,
 				2C839CFF2BB4A77B0007056E /* PickerTest.swift in Sources */,
 				2C839CF42BB4A7730007056E /* ZeroHeightAvatarView.swift in Sources */,

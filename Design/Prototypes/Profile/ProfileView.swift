@@ -30,7 +30,7 @@ struct ProfileView: View {
                     Text("Officia minim irure minim consectetur reprehenderit. Fugiat anim enim laboris magna est dolore est sit qui ullamco est aute.\n\nElit nostrud aliqua et fugiat amet officia nostrud labore duis dolore.")
                         .padding(.horizontal)
                     HStack(spacing: 16) {
-                        FollowersFollowingCount(count: 2603, text: "followers")
+                        FollowersFollowingCount(count: 2_760_000, text: "followers")
                         FollowersFollowingCount(count: 501, text: "following")
                     }
                     .foregroundStyle(.primary)
