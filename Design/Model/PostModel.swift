@@ -85,7 +85,7 @@ struct Post: Identifiable {
 }
 
 // Represents a user account associated with a post
-struct Account: Identifiable {
+struct Account: Identifiable, Hashable {
     let id: String
     let username: String
     let server: String
@@ -103,6 +103,14 @@ struct Account: Identifiable {
         self.server = server
         self.displayName = displayName
         self.avatar = avatar
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+    
+    static func == (lhs: Account, rhs: Account) -> Bool {
+        return lhs.id == rhs.id
     }
 }
 

@@ -27,6 +27,7 @@
 		2C839D0D2BB4AB3B0007056E /* Prototype.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C839D0C2BB4AB3B0007056E /* Prototype.swift */; };
 		EA0578062BB5EAC0004985E8 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0578052BB5EAC0004985E8 /* PostModel.swift */; };
 		EA0578082BB5F218004985E8 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0578072BB5F218004985E8 /* SampleData.swift */; };
+		EA2AD0BA2BEBEEF9001B9255 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2AD0B92BEBEEF9001B9255 /* NotificationCell.swift */; };
 		EA3EA11A2BB5B98600A02C69 /* MediaGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3EA1192BB5B98600A02C69 /* MediaGrid.swift */; };
 		EA3EA11C2BB5DD8300A02C69 /* ActionButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3EA11B2BB5DD8300A02C69 /* ActionButtons.swift */; };
 		EA3EA11E2BB5E00200A02C69 /* BoostHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3EA11D2BB5E00200A02C69 /* BoostHeader.swift */; };
@@ -58,6 +59,7 @@
 		2C839D0C2BB4AB3B0007056E /* Prototype.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prototype.swift; sourceTree = "<group>"; };
 		EA0578052BB5EAC0004985E8 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		EA0578072BB5F218004985E8 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		EA2AD0B92BEBEEF9001B9255 /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
 		EA3EA1192BB5B98600A02C69 /* MediaGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaGrid.swift; sourceTree = "<group>"; };
 		EA3EA11B2BB5DD8300A02C69 /* ActionButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtons.swift; sourceTree = "<group>"; };
 		EA3EA11D2BB5E00200A02C69 /* BoostHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostHeader.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 		2C839CEE2BB4A6420007056E /* Prototypes */ = {
 			isa = PBXGroup;
 			children = (
+				EA2AD0B82BEBEEE5001B9255 /* GroupedNotifications */,
 				EADC79CD2BCEF4E00093C51D /* PostDetail */,
 				EADBCD272BB4B340008D5BAB /* TimelineNavBar */,
 				2C839CEF2BB4A7580007056E /* Profile */,
@@ -166,6 +169,14 @@
 				EA0578072BB5F218004985E8 /* SampleData.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		EA2AD0B82BEBEEE5001B9255 /* GroupedNotifications */ = {
+			isa = PBXGroup;
+			children = (
+				EA2AD0B92BEBEEF9001B9255 /* NotificationCell.swift */,
+			);
+			path = GroupedNotifications;
 			sourceTree = "<group>";
 		};
 		EA983B632BB4DC2B00D75AE2 /* TimelinePostCell */ = {
@@ -300,6 +311,7 @@
 				2C839CF42BB4A7730007056E /* ZeroHeightAvatarView.swift in Sources */,
 				EA0578082BB5F218004985E8 /* SampleData.swift in Sources */,
 				EA983B652BB4DC3600D75AE2 /* TimelinePostCell.swift in Sources */,
+				EA2AD0BA2BEBEEF9001B9255 /* NotificationCell.swift in Sources */,
 				2C839CE12BB4A6100007056E /* DesignApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
