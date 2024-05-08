@@ -20,7 +20,7 @@ extension TimelinePostCell {
             }
             .foregroundStyle(.secondary)
             .lineLimit(1)
-            .font(.subheadline)
+            .font(.callout)
         }
     }
 }

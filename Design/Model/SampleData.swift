@@ -37,7 +37,7 @@ struct SampleData {
         repliesCount: 0,
         boosts: 9,
         favorites: 999,
-        content: "lorem ipsum",
+        content: "Dolor velit minim nisi. Velit ex id mollit est cupidatat. Laboris amet exercitation nostrud cupidatat qui officia dolor pariatur consectetur.",
         isFavorited: false,
         isBoosted: false,
         muted: false,

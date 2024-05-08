@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct TimelinePostCell: View {
+    var includePadding = true
+    
     var body: some View {
-        Grid(alignment: .leading, verticalSpacing: 6) {
+        Grid(alignment: .leading, verticalSpacing: 4) {
             BoostHeader()
             GridRow(alignment: .top) {
                 Image("avatar")
@@ -21,6 +23,7 @@ struct TimelinePostCell: View {
                             .stroke(.separator, lineWidth: 1)
                             .blendMode(.plusLighter)
                     }
+                    .offset(x: 0, y: 4)
                 VStack(alignment: .leading) {
                     AuthorHeader()
                     Text("Exercitation esse ut culpa laboris voluptate ut cupidatat qui sunt tempor. Exercitation dolore anim quis dolore ut aliquip aute deserunt reprehenderit.")
@@ -31,7 +34,7 @@ struct TimelinePostCell: View {
                 }
             }
         }
-        .padding()
+        .padding(.all, includePadding ? nil : 0)
     }
 
 }
