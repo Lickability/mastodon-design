@@ -17,6 +17,7 @@ enum Prototype: String, CaseIterable, Identifiable, CustomStringConvertible {
     
     case profile = "Profile"
     case timelineNavBar = "Timeline Nav Bar"
+    case groupedNotifs = "Grouped Notifications"
     
     @ViewBuilder @MainActor var view: some View {
         switch self {
@@ -24,14 +25,14 @@ enum Prototype: String, CaseIterable, Identifiable, CustomStringConvertible {
             ProfileView()
         case .timelineNavBar:
             TimelineNavBar()
+        case .groupedNotifs:
+            GroupedNotifications()
         }
     }
         
     var displayStyle: DisplayStyle {
         switch self {
-        case .profile:
-            return .fullScreenCover
-        case .timelineNavBar:
+        case .profile, .timelineNavBar, .groupedNotifs:
             return .fullScreenCover
         }
     }
