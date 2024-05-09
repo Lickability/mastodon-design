@@ -18,7 +18,7 @@ struct GroupedNotifications: View {
     
     var body: some View {
         List {
-            NotificationCell(type: .lostConnection) {
+            NotificationCell(type: .lostConnection, isUnread: true) {
                 VStack(alignment: .leading, spacing: 8) {
                     Text("An admin from **example.social** has blocked **mastodon.social**, including 4 of your followers and 2 accounts you follow.")
                     Button("Learn More", action: {})
@@ -27,11 +27,11 @@ struct GroupedNotifications: View {
                         .foregroundStyle(.accent)
                 }
             }
-            NotificationCell(type: nil) {
+            NotificationCell(type: nil, isUnread: true) {
                 TimelinePostCell(includePadding: false)
             }
             .foregroundStyle(.primary)
-            NotificationCell(type: .announcement) {
+            NotificationCell(type: .announcement, isUnread: true) {
                 Text("From example.social:")
                     .font(.headline)
                 VStack(alignment: .leading, spacing: 8) {
@@ -68,21 +68,21 @@ struct GroupedNotifications: View {
                     })
                 }
             }
-            NotificationCell(type: .favorite) {
+            NotificationCell(type: .favorite, isUnread: false) {
                 AvatarGroupRow(count: 6)
                 Text("**Full Name** and 5 others favorited:")
                 InlinePostPreview(post: SampleData.samplePost)
             }
-            NotificationCell(type: .boost) {
+            NotificationCell(type: .boost, isUnread: false) {
                 AvatarGroupRow(count: 2)
                 Text("**Full Name** and **Other Name** boosted:")
                 InlinePostPreview(post: SampleData.samplePost)
             }
-            NotificationCell(type: .follow) {
+            NotificationCell(type: .follow, isUnread: false) {
                 AvatarGroupRow(count: 7) // 8 is maximum but start popping avatars from the end as we run out of space.
                 Text("**Full Name** and 30 others followed you")
             }
-            NotificationCell(type: .follow) {
+            NotificationCell(type: .follow, isUnread: false) {
                 HStack {
                     AvatarGroupRow(count: 1)
                     Button("Follow Back") {}
@@ -92,7 +92,7 @@ struct GroupedNotifications: View {
                 }
                 Text("**Full Name** followed you")
             }
-            NotificationCell(type: .pollEnded) {
+            NotificationCell(type: .pollEnded, isUnread: false) {
                 Text("**Full Name** ran a poll that you and 100 others voted in")
                 InlinePostPreview(post: SampleData.samplePost)
             }
@@ -103,6 +103,7 @@ struct GroupedNotifications: View {
 
 struct NotificationCell<Content: View>: View {
     let type: NotificationType?
+    let isUnread: Bool
     @ViewBuilder let content: Content
     
     var body: some View {
@@ -122,6 +123,7 @@ struct NotificationCell<Content: View>: View {
         })
         .listRowInsets(EdgeInsets())
         .listRowSeparator(.hidden)
+        .background(isUnread ? .accent.opacity(0.1) : .clear)
     }
 }
 
