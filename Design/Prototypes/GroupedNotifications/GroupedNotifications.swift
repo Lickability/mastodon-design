@@ -19,96 +19,87 @@ struct GroupedNotifications: View {
     let announcementFullText = "Looks like there was an issue processing audio attachments without embedded art since yesterday due to an experimental new feature. That issue has now been fixed, so you may see older posts with audio from other servers pop up in your feeds now as they are being finally properly processed. Sorry!"
     
     var body: some View {
-        NavigationStack {
-            List {
-                NotificationCell(type: .lostConnection, isUnread: true) {
-                    VStack(alignment: .leading, spacing: 8) {
-                        Text("An admin from **example.social** has blocked **mastodon.social**, including 4 of your followers and 2 accounts you follow.")
-                        Button("Learn More", action: {})
-                            .buttonStyle(.plain)
-                            .bold()
-                            .foregroundStyle(.accent)
-                    }
-                }
-                NotificationCell(type: nil, isUnread: true) {
-                    TimelinePostCell(includePadding: false)
-                }
-                .foregroundStyle(.primary)
-                NotificationCell(type: .announcement, isUnread: true) {
-                    Text("From example.social:")
-                        .font(.headline)
-                    VStack(alignment: .leading, spacing: 8) {
-                        Text(announcementFullText)
-                            .lineLimit(5)
-                        Button("Read More", action: {
-                            announcementFullTextPresented = true
-                        })
+        List {
+            NotificationCell(type: .lostConnection, isUnread: true) {
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("An admin from **example.social** has blocked **mastodon.social**, including 4 of your followers and 2 accounts you follow.")
+                    Button("Learn More", action: {})
                         .buttonStyle(.plain)
                         .bold()
                         .foregroundStyle(.accent)
-                        .sheet(isPresented: $announcementFullTextPresented, content: {
-                            NavigationStack {
-                                ScrollView {
-                                    VStack(alignment: .leading) {
-                                        Text(announcementFullText)
-                                        Text("\nShared today at 9:00 AM by the example.social admins.")
-                                            .font(.subheadline)
-                                            .foregroundStyle(.secondary)
-                                    }
-                                    .padding()
+                }
+            }
+            NotificationCell(type: nil, isUnread: true) {
+                TimelinePostCell(includePadding: false)
+            }
+            .foregroundStyle(.primary)
+            NotificationCell(type: .announcement, isUnread: true) {
+                Text("From example.social:")
+                    .font(.headline)
+                VStack(alignment: .leading, spacing: 8) {
+                    Text(announcementFullText)
+                        .lineLimit(5)
+                    Button("Read More", action: {
+                        announcementFullTextPresented = true
+                    })
+                    .buttonStyle(.plain)
+                    .bold()
+                    .foregroundStyle(.accent)
+                    .sheet(isPresented: $announcementFullTextPresented, content: {
+                        NavigationStack {
+                            ScrollView {
+                                VStack(alignment: .leading) {
+                                    Text(announcementFullText)
+                                    Text("\nShared today at 9:00 AM by the example.social admins.")
+                                        .font(.subheadline)
+                                        .foregroundStyle(.secondary)
                                 }
-                                .navigationTitle("From example.social")
-                                .navigationBarTitleDisplayMode(.inline)
-                                .toolbar {
-                                    ToolbarItem(placement: .confirmationAction) {
-                                        Button("Done") {
-                                            announcementFullTextPresented = false
-                                        }
+                                .padding()
+                            }
+                            .navigationTitle("From example.social")
+                            .navigationBarTitleDisplayMode(.inline)
+                            .toolbar {
+                                ToolbarItem(placement: .confirmationAction) {
+                                    Button("Done") {
+                                        announcementFullTextPresented = false
                                     }
                                 }
                             }
-                            .presentationDragIndicator(.visible)
-                        })
-                    }
-                }
-                NotificationCell(type: .favorite, isUnread: false) {
-                    AvatarGroupRow(count: 6)
-                    Text("**Full Name** and 5 others favorited:")
-                    InlinePostPreview(post: SampleData.samplePost)
-                }
-                NotificationCell(type: .boost, isUnread: false) {
-                    AvatarGroupRow(count: 2)
-                    Text("**Full Name** and **Other Name** boosted:")
-                    InlinePostPreview(post: SampleData.samplePost)
-                }
-                NotificationCell(type: .follow, isUnread: false) {
-                    AvatarGroupRow(count: 7) // 8 is maximum but start popping avatars from the end as we run out of space.
-                    Text("**Full Name** and 30 others followed you")
-                }
-                NotificationCell(type: .follow, isUnread: false) {
-                    HStack {
-                        AvatarGroupRow(count: 1)
-                        Button("Follow Back") {}
-                            .buttonStyle(.borderedProminent)
-                            .controlSize(.small)
-                            .bold()
-                    }
-                    Text("**Full Name** followed you")
-                }
-                NotificationCell(type: .pollEnded, isUnread: false) {
-                    Text("**Full Name** ran a poll that you and 100 others voted in")
-                    InlinePostPreview(post: SampleData.samplePost)
+                        }
+                        .presentationDragIndicator(.visible)
+                    })
                 }
             }
-            .listStyle(.plain)
-            .toolbar {
-                ToolbarItem(placement: .bottomBar) {
-                    Button("Close") {
-                        dismiss()
-                    }
+            NotificationCell(type: .favorite, isUnread: false) {
+                AvatarGroupRow(count: 6)
+                Text("**Full Name** and 5 others favorited:")
+                InlinePostPreview(post: SampleData.samplePost)
+            }
+            NotificationCell(type: .boost, isUnread: false) {
+                AvatarGroupRow(count: 2)
+                Text("**Full Name** and **Other Name** boosted:")
+                InlinePostPreview(post: SampleData.samplePost)
+            }
+            NotificationCell(type: .follow, isUnread: false) {
+                AvatarGroupRow(count: 7) // 8 is maximum but start popping avatars from the end as we run out of space.
+                Text("**Full Name** and 30 others followed you")
+            }
+            NotificationCell(type: .follow, isUnread: false) {
+                HStack {
+                    AvatarGroupRow(count: 1)
+                    Button("Follow Back") {}
+                        .buttonStyle(.borderedProminent)
+                        .controlSize(.small)
+                        .bold()
                 }
+                Text("**Full Name** followed you")
+            }
+            NotificationCell(type: .pollEnded, isUnread: false) {
+                Text("**Full Name** ran a poll that you and 100 others voted in")
+                InlinePostPreview(post: SampleData.samplePost)
             }
         }
+        .listStyle(.plain)
     }
 }
 

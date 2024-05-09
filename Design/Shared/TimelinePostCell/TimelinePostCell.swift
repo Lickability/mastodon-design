@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TimelinePostCell: View {
     var includePadding = true
+    var showMediaGrid = false
     
     var body: some View {
         Grid(alignment: .leading, verticalSpacing: 4) {
@@ -28,7 +29,9 @@ struct TimelinePostCell: View {
                     AuthorHeader()
                     Text("Exercitation esse ut culpa laboris voluptate ut cupidatat qui sunt tempor. Exercitation dolore anim quis dolore ut aliquip aute deserunt reprehenderit.")
                         .font(.callout)
-//                    MediaGrid()
+                    if showMediaGrid {
+                        MediaGrid()
+                    }
                     ActionButtons()
                         .padding(.vertical, 4)
                 }
