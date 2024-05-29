@@ -34,6 +34,7 @@
 		EA3EA11C2BB5DD8300A02C69 /* ActionButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3EA11B2BB5DD8300A02C69 /* ActionButtons.swift */; };
 		EA3EA11E2BB5E00200A02C69 /* BoostHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3EA11D2BB5E00200A02C69 /* BoostHeader.swift */; };
 		EA3EA1212BB5E3F800A02C69 /* Pow in Frameworks */ = {isa = PBXBuildFile; productRef = EA3EA1202BB5E3F800A02C69 /* Pow */; };
+		EA5A04662C07564400C8F4C6 /* UserList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A04652C07564400C8F4C6 /* UserList.swift */; };
 		EA983B652BB4DC3600D75AE2 /* TimelinePostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA983B642BB4DC3600D75AE2 /* TimelinePostCell.swift */; };
 		EA983B672BB4DC4D00D75AE2 /* AuthorHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA983B662BB4DC4C00D75AE2 /* AuthorHeader.swift */; };
 		EADBCD292BB4B361008D5BAB /* TimelineNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADBCD282BB4B361008D5BAB /* TimelineNavBar.swift */; };
@@ -67,6 +68,7 @@
 		EA3EA1192BB5B98600A02C69 /* MediaGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaGrid.swift; sourceTree = "<group>"; };
 		EA3EA11B2BB5DD8300A02C69 /* ActionButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtons.swift; sourceTree = "<group>"; };
 		EA3EA11D2BB5E00200A02C69 /* BoostHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostHeader.swift; sourceTree = "<group>"; };
+		EA5A04652C07564400C8F4C6 /* UserList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserList.swift; sourceTree = "<group>"; };
 		EA983B642BB4DC3600D75AE2 /* TimelinePostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelinePostCell.swift; sourceTree = "<group>"; };
 		EA983B662BB4DC4C00D75AE2 /* AuthorHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorHeader.swift; sourceTree = "<group>"; };
 		EADBCD282BB4B361008D5BAB /* TimelineNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineNavBar.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 		2C839CEE2BB4A6420007056E /* Prototypes */ = {
 			isa = PBXGroup;
 			children = (
+				EA5A04642C07563700C8F4C6 /* UserListExplorations */,
 				EA2AD0BD2BEC0064001B9255 /* GroupedNotifications */,
 				EADC79CD2BCEF4E00093C51D /* PostDetail */,
 				EADBCD272BB4B340008D5BAB /* TimelineNavBar */,
@@ -183,6 +186,14 @@
 				EA2AD0C02BEC0184001B9255 /* InlinePostPreview.swift */,
 			);
 			path = GroupedNotifications;
+			sourceTree = "<group>";
+		};
+		EA5A04642C07563700C8F4C6 /* UserListExplorations */ = {
+			isa = PBXGroup;
+			children = (
+				EA5A04652C07564400C8F4C6 /* UserList.swift */,
+			);
+			path = UserListExplorations;
 			sourceTree = "<group>";
 		};
 		EA983B632BB4DC2B00D75AE2 /* TimelinePostCell */ = {
@@ -306,6 +317,7 @@
 				2C839D042BB4A7ED0007056E /* ProfileView.swift in Sources */,
 				EA3EA11E2BB5E00200A02C69 /* BoostHeader.swift in Sources */,
 				EA3EA11A2BB5B98600A02C69 /* MediaGrid.swift in Sources */,
+				EA5A04662C07564400C8F4C6 /* UserList.swift in Sources */,
 				EA0578062BB5EAC0004985E8 /* PostModel.swift in Sources */,
 				2C839D0D2BB4AB3B0007056E /* Prototype.swift in Sources */,
 				2C839CFC2BB4A77B0007056E /* ProfileChipData.swift in Sources */,

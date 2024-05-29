@@ -9,22 +9,34 @@ import SwiftUI
 
 struct InlinePostPreview: View {
     let post: Post
+    var needsUserAttribution = true
+    var isPinned = false
     
     var body: some View {
         VStack(alignment: .leading) {
             HStack(spacing: 4) {
-                RoundedRectangle(cornerRadius: 4)
-                    .frame(width: 16, height: 16)
-                Text(post.account.displayName)
+                if needsUserAttribution {
+                    RoundedRectangle(cornerRadius: 4)
+                        .frame(width: 16, height: 16)
+                    Text(post.account.displayName)
+                        .bold()
+                    Text("@\(post.account.username)@\(post.account.server)")
+                        .foregroundStyle(.secondary)
+                    Spacer(minLength: 0)
+                } else if isPinned {
+//                    This *should* be a Label but it acts funky when this is in a List (i.e. in UserList)
+                    Group {
+                        Image(systemName: "pin.fill")
+                        Text("Pinned")
+                    }
                     .bold()
-                Text("@\(post.account.username)@\(post.account.server)")
                     .foregroundStyle(.secondary)
-                Spacer(minLength: 0)
+                    .imageScale(.small)
+                }
             }
             .lineLimit(1)
             .font(.subheadline)
             Text(post.content)
-//                .font(.callout)
                 .lineLimit(3)
         }
         .padding(8)
@@ -38,5 +50,9 @@ struct InlinePostPreview: View {
 }
 
 #Preview {
-    InlinePostPreview(post: SampleData.samplePost)
+    VStack {
+        InlinePostPreview(post: SampleData.samplePost)
+        InlinePostPreview(post: SampleData.samplePost, needsUserAttribution: false, isPinned: true)
+    }
+    .padding()
 }
