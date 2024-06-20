@@ -17,6 +17,7 @@ enum Prototype: String, CaseIterable, Identifiable, CustomStringConvertible {
     
     case profile = "Profile"
     case timelineNavBar = "Timeline Nav Bar"
+    case linkPreview = "Link Preview Card"
     case groupedNotifs = "Grouped Notifications"
     case loosePostCell = "Just a loose post cell view"
     case userRows = "User Row Styles"
@@ -27,6 +28,8 @@ enum Prototype: String, CaseIterable, Identifiable, CustomStringConvertible {
             ProfileView()
         case .timelineNavBar:
             TimelineNavBar()
+        case .linkPreview:
+            LinkPreviewCard()
         case .groupedNotifs:
             GroupedNotifications()
         case .loosePostCell:
@@ -38,7 +41,7 @@ enum Prototype: String, CaseIterable, Identifiable, CustomStringConvertible {
         
     var displayStyle: DisplayStyle {
         switch self {
-        case .profile, .timelineNavBar:
+        case .profile, .timelineNavBar, .linkPreview:
             return .fullScreenCover
         case .groupedNotifs, .loosePostCell, .userRows:
             return .navigationLink
