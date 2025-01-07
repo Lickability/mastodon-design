@@ -5,15 +5,53 @@
 //  Created by Sam on 2024-03-28.
 //
 
-import Foundation
 import SwiftUI
+import Photos
 
-// Defines a post in the social media app
+/// Represents a user account associated with a post.
+/// (Also used by our composer.)
+struct Account: Identifiable {
+    let id: String
+    let username: String
+    let server: String
+    let displayName: String
+    let avatar: Image // SwiftUI Image
+    
+    init(id: String = UUID().uuidString,
+         username: String,
+         server: String,
+         displayName: String,
+         avatar: Image) {
+        
+        self.id = id
+        self.username = username
+        self.server = server
+        self.displayName = displayName
+        self.avatar = avatar
+    }
+}
+
+/// Represents media attachments in a post.
+struct MediaAttachment: Identifiable {
+    let id: UUID = UUID()
+    let type: PHAssetResourceType
+    var fileURL: URL
+    var altText: String?
+}
+
+enum PostExtra {
+    case none
+    case media([MediaAttachment])
+    case poll(PollData)
+}
+
+/// Defines a final published post in the social media app.
 struct Post: Identifiable {
     let id: String
     var uri: String
     var content: String
     var account: Account
+    
     var repliesCount: Int = 0
     var boosts: Int = 0
     var isBoosted: Bool = false
@@ -33,36 +71,39 @@ struct Post: Identifiable {
     mutating func addReply() {
         repliesCount += 1
     }
+    
     let createdAt: Date
     let inReplyToId: String?
     let sensitive: Bool
     let spoilerText: String
-    let visibility: String
+    let visibility: PostVisibility
     let url: String?
     let muted: Bool
     let bookmarked: Bool
-    let mediaAttachments: [MediaAttachment]
+    let postExtra: PostExtra
+    
     // Initialize with default values for simplicity
-    init(id: String = UUID().uuidString,
-         createdAt: Date = Date(),
-         inReplyToId: String? = nil,
-         sensitive: Bool = false,
-         spoilerText: String = "",
-         visibility: String = "public",
-         uri: String,
-         url: String? = nil,
-         repliesCount: Int = 0,
-         boosts: Int = 0,
-         favorites: Int = 0,
-         content: String,
-         isFavorited: Bool = false,
-         isBoosted: Bool = false,
-         muted: Bool = false,
-         bookmarked: Bool = false,
-         account: Account,
-         reblog: Post? = nil,
-         mediaAttachments: [MediaAttachment] = []) {
-        
+    init(
+        id: String = UUID().uuidString,
+        createdAt: Date = Date(),
+        inReplyToId: String? = nil,
+        sensitive: Bool = false,
+        spoilerText: String = "",
+        visibility: PostVisibility = .public,
+        uri: String,
+        url: String? = nil,
+        repliesCount: Int = 0,
+        boosts: Int = 0,
+        favorites: Int = 0,
+        content: String,
+        isFavorited: Bool = false,
+        isBoosted: Bool = false,
+        muted: Bool = false,
+        bookmarked: Bool = false,
+        account: Account,
+        reblog: Post? = nil,
+        postExtra: PostExtra = .none
+    ) {
         self.id = id
         self.createdAt = createdAt
         self.inReplyToId = inReplyToId
@@ -80,44 +121,6 @@ struct Post: Identifiable {
         self.muted = muted
         self.bookmarked = bookmarked
         self.account = account
-        self.mediaAttachments = mediaAttachments
-    }
-}
-
-// Represents a user account associated with a post
-struct Account: Identifiable {
-    let id: String
-    let username: String
-    let server: String
-    let displayName: String
-    let avatar: Image // SwiftUI Image
-    // Initialize with default values for simplicity
-    init(id: String = UUID().uuidString,
-         username: String,
-         server: String,
-         displayName: String,
-         avatar: Image) {
-        
-        self.id = id
-        self.username = username
-        self.server = server
-        self.displayName = displayName
-        self.avatar = avatar
-    }
-}
-
-// Represents media attachments in a post
-struct MediaAttachment {
-    let id: String
-    let type: String // Could be "image", "video", etc.
-    let image: Image // SwiftUI Image for displaying
-    // Initialize with default values for simplicity
-    init(id: String = UUID().uuidString,
-         type: String = "image",
-         image: Image) {
-        
-        self.id = id
-        self.type = type
-        self.image = image
+        self.postExtra = postExtra
     }
 }

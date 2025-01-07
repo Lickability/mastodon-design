@@ -18,11 +18,10 @@ struct SampleData {
     )
     
     static let sampleMediaAttachments = [
-        MediaAttachment(id: "1", image: Image("landscape")),
-        MediaAttachment(id: "2", image: Image("portrait")),
-        MediaAttachment(id: "3", image: Image("screenshot")),
-        MediaAttachment(id: "4", image: Image("square")),
-        MediaAttachment(id: "5", image: Image("ultrawide"))
+        MediaAttachment(type: .photo, fileURL: Bundle.main.url(forResource: "landscape", withExtension: "jpeg")!, altText: "A bunch of little hotel toiletries and samples on my coffee table"),
+        MediaAttachment(type: .photo, fileURL: Bundle.main.url(forResource: "portrait", withExtension: "jpeg")!),
+        MediaAttachment(type: .photo, fileURL: Bundle.main.url(forResource: "screenshot", withExtension: "png")!),
+        MediaAttachment(type: .photo, fileURL: Bundle.main.url(forResource: "ultrawide", withExtension: "jpg")!),
     ]
     
     static let samplePost = Post(
@@ -31,7 +30,7 @@ struct SampleData {
         inReplyToId: nil,
         sensitive: false,
         spoilerText: "",
-        visibility: "public",
+        visibility: .public,
         uri: "https://example.com/post/1",
         url: "https://example.com/post/1",
         repliesCount: 0,
@@ -44,6 +43,6 @@ struct SampleData {
         bookmarked: false,
         account: sampleAccount,
         reblog: nil,
-        mediaAttachments: sampleMediaAttachments
+        postExtra: .media(sampleMediaAttachments)
     )
 }

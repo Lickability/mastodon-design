@@ -21,6 +21,7 @@ enum Prototype: String, CaseIterable, Identifiable, CustomStringConvertible {
     case groupedNotifs = "Grouped Notifications"
     case loosePostCell = "Just a loose post cell view"
     case userRows = "User Row Styles"
+    case composer = "Composer"
     
     @ViewBuilder @MainActor var view: some View {
         switch self {
@@ -36,12 +37,14 @@ enum Prototype: String, CaseIterable, Identifiable, CustomStringConvertible {
             TimelinePostCell(showMediaGrid: true)
         case .userRows:
             UserList()
+        case .composer:
+            ComposerView()
         }
     }
         
     var displayStyle: DisplayStyle {
         switch self {
-        case .profile, .timelineNavBar, .linkPreview:
+        case .profile, .timelineNavBar, .linkPreview, .composer:
             return .fullScreenCover
         case .groupedNotifs, .loosePostCell, .userRows:
             return .navigationLink

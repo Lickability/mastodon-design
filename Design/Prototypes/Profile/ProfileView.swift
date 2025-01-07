@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import SwiftUIIntrospect
 
 struct ProfileView: View {
     @StateObject var viewModel = ChipsViewModel(chips: chips)

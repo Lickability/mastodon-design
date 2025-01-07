@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,9 +21,6 @@
 		2C839CFF2BB4A77B0007056E /* PickerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C839CFB2BB4A77B0007056E /* PickerTest.swift */; };
 		2C839D022BB4A78D0007056E /* NumberAbbreviationFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C839D012BB4A78D0007056E /* NumberAbbreviationFormatter.swift */; };
 		2C839D042BB4A7ED0007056E /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C839D032BB4A7ED0007056E /* ProfileView.swift */; };
-		2C839D072BB4A81C0007056E /* SwiftUIIntrospect in Frameworks */ = {isa = PBXBuildFile; productRef = 2C839D062BB4A81C0007056E /* SwiftUIIntrospect */; };
-		2C839D092BB4A81C0007056E /* SwiftUIIntrospect-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 2C839D082BB4A81C0007056E /* SwiftUIIntrospect-Dynamic */; };
-		2C839D0B2BB4A81C0007056E /* SwiftUIIntrospect-Static in Frameworks */ = {isa = PBXBuildFile; productRef = 2C839D0A2BB4A81C0007056E /* SwiftUIIntrospect-Static */; };
 		2C839D0D2BB4AB3B0007056E /* Prototype.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C839D0C2BB4AB3B0007056E /* Prototype.swift */; };
 		EA0578062BB5EAC0004985E8 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0578052BB5EAC0004985E8 /* PostModel.swift */; };
 		EA0578082BB5F218004985E8 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0578072BB5F218004985E8 /* SampleData.swift */; };
@@ -38,6 +35,8 @@
 		EA8E1DC52C24694900A38293 /* LinkPreviewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8E1DC42C24694900A38293 /* LinkPreviewCard.swift */; };
 		EA983B652BB4DC3600D75AE2 /* TimelinePostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA983B642BB4DC3600D75AE2 /* TimelinePostCell.swift */; };
 		EA983B672BB4DC4D00D75AE2 /* AuthorHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA983B662BB4DC4C00D75AE2 /* AuthorHeader.swift */; };
+		EACD783E2D2D677B00CAA828 /* PostVisibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACD783D2D2D677B00CAA828 /* PostVisibility.swift */; };
+		EACD78402D2D69CD00CAA828 /* PollModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACD783F2D2D69CD00CAA828 /* PollModel.swift */; };
 		EADBCD292BB4B361008D5BAB /* TimelineNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADBCD282BB4B361008D5BAB /* TimelineNavBar.swift */; };
 		EADBCD2B2BB4B37C008D5BAB /* TimelinePillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADBCD2A2BB4B37C008D5BAB /* TimelinePillView.swift */; };
 		EADC79CF2BCEF4EE0093C51D /* PostDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADC79CE2BCEF4EE0093C51D /* PostDetailView.swift */; };
@@ -73,21 +72,26 @@
 		EA8E1DC42C24694900A38293 /* LinkPreviewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkPreviewCard.swift; sourceTree = "<group>"; };
 		EA983B642BB4DC3600D75AE2 /* TimelinePostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelinePostCell.swift; sourceTree = "<group>"; };
 		EA983B662BB4DC4C00D75AE2 /* AuthorHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorHeader.swift; sourceTree = "<group>"; };
+		EACD783D2D2D677B00CAA828 /* PostVisibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostVisibility.swift; sourceTree = "<group>"; };
+		EACD783F2D2D69CD00CAA828 /* PollModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollModel.swift; sourceTree = "<group>"; };
 		EADBCD282BB4B361008D5BAB /* TimelineNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineNavBar.swift; sourceTree = "<group>"; };
 		EADBCD2A2BB4B37C008D5BAB /* TimelinePillView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelinePillView.swift; sourceTree = "<group>"; };
 		EADC79CE2BCEF4EE0093C51D /* PostDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailView.swift; sourceTree = "<group>"; };
 		EAE41D6C2BC597B3004256D9 /* Text+Collapsible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Collapsible.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		EA9BE5F62CD116FB00C8B9D9 /* Quotes */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Quotes; sourceTree = "<group>"; };
+		EACD78362D2D610300CAA828 /* Composer */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Composer; sourceTree = "<group>"; };
+		EACD78432D2D791B00CAA828 /* Images */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Images; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		2C839CDA2BB4A6100007056E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C839D072BB4A81C0007056E /* SwiftUIIntrospect in Frameworks */,
 				EA3EA1212BB5E3F800A02C69 /* Pow in Frameworks */,
-				2C839D092BB4A81C0007056E /* SwiftUIIntrospect-Dynamic in Frameworks */,
-				2C839D0B2BB4A81C0007056E /* SwiftUIIntrospect-Static in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +119,7 @@
 			children = (
 				2C839CE02BB4A6100007056E /* DesignApp.swift */,
 				2C839D0C2BB4AB3B0007056E /* Prototype.swift */,
+				EACD78432D2D791B00CAA828 /* Images */,
 				2C839CE22BB4A6100007056E /* PrototypesList.swift */,
 				EA0578042BB5EAB4004985E8 /* Model */,
 				2C839D002BB4A7840007056E /* Shared */,
@@ -136,6 +141,8 @@
 		2C839CEE2BB4A6420007056E /* Prototypes */ = {
 			isa = PBXGroup;
 			children = (
+				EACD78362D2D610300CAA828 /* Composer */,
+				EA9BE5F62CD116FB00C8B9D9 /* Quotes */,
 				EA8E1DC32C24693F00A38293 /* LinkPreviews */,
 				EA5A04642C07563700C8F4C6 /* UserListExplorations */,
 				EA2AD0BD2BEC0064001B9255 /* GroupedNotifications */,
@@ -177,6 +184,8 @@
 			isa = PBXGroup;
 			children = (
 				EA0578052BB5EAC0004985E8 /* PostModel.swift */,
+				EACD783F2D2D69CD00CAA828 /* PollModel.swift */,
+				EACD783D2D2D677B00CAA828 /* PostVisibility.swift */,
 				EA0578072BB5F218004985E8 /* SampleData.swift */,
 			);
 			path = Model;
@@ -251,11 +260,13 @@
 			);
 			dependencies = (
 			);
+			fileSystemSynchronizedGroups = (
+				EA9BE5F62CD116FB00C8B9D9 /* Quotes */,
+				EACD78362D2D610300CAA828 /* Composer */,
+				EACD78432D2D791B00CAA828 /* Images */,
+			);
 			name = Design;
 			packageProductDependencies = (
-				2C839D062BB4A81C0007056E /* SwiftUIIntrospect */,
-				2C839D082BB4A81C0007056E /* SwiftUIIntrospect-Dynamic */,
-				2C839D0A2BB4A81C0007056E /* SwiftUIIntrospect-Static */,
 				EA3EA1202BB5E3F800A02C69 /* Pow */,
 			);
 			productName = Design;
@@ -287,7 +298,6 @@
 			);
 			mainGroup = 2C839CD42BB4A6100007056E;
 			packageReferences = (
-				2C839D052BB4A81C0007056E /* XCRemoteSwiftPackageReference "swiftui-introspect" */,
 				EA3EA11F2BB5E3F700A02C69 /* XCRemoteSwiftPackageReference "Pow" */,
 			);
 			productRefGroup = 2C839CDE2BB4A6100007056E /* Products */;
@@ -330,6 +340,7 @@
 				EA3EA11A2BB5B98600A02C69 /* MediaGrid.swift in Sources */,
 				EA5A04662C07564400C8F4C6 /* UserList.swift in Sources */,
 				EA0578062BB5EAC0004985E8 /* PostModel.swift in Sources */,
+				EACD783E2D2D677B00CAA828 /* PostVisibility.swift in Sources */,
 				2C839D0D2BB4AB3B0007056E /* Prototype.swift in Sources */,
 				2C839CFC2BB4A77B0007056E /* ProfileChipData.swift in Sources */,
 				EA8E1DC52C24694900A38293 /* LinkPreviewCard.swift in Sources */,
@@ -340,6 +351,7 @@
 				2C839CF72BB4A7730007056E /* UsernameLockup.swift in Sources */,
 				2C839CFF2BB4A77B0007056E /* PickerTest.swift in Sources */,
 				2C839CF42BB4A7730007056E /* ZeroHeightAvatarView.swift in Sources */,
+				EACD78402D2D69CD00CAA828 /* PollModel.swift in Sources */,
 				EA2AD0BF2BEC006F001B9255 /* GroupedNotifications.swift in Sources */,
 				EA0578082BB5F218004985E8 /* SampleData.swift in Sources */,
 				EA983B652BB4DC3600D75AE2 /* TimelinePostCell.swift in Sources */,
@@ -552,14 +564,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		2C839D052BB4A81C0007056E /* XCRemoteSwiftPackageReference "swiftui-introspect" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/siteline/swiftui-introspect";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.1.3;
-			};
-		};
 		EA3EA11F2BB5E3F700A02C69 /* XCRemoteSwiftPackageReference "Pow" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/movingparts-io/Pow";
@@ -571,21 +575,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		2C839D062BB4A81C0007056E /* SwiftUIIntrospect */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2C839D052BB4A81C0007056E /* XCRemoteSwiftPackageReference "swiftui-introspect" */;
-			productName = SwiftUIIntrospect;
-		};
-		2C839D082BB4A81C0007056E /* SwiftUIIntrospect-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2C839D052BB4A81C0007056E /* XCRemoteSwiftPackageReference "swiftui-introspect" */;
-			productName = "SwiftUIIntrospect-Dynamic";
-		};
-		2C839D0A2BB4A81C0007056E /* SwiftUIIntrospect-Static */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2C839D052BB4A81C0007056E /* XCRemoteSwiftPackageReference "swiftui-introspect" */;
-			productName = "SwiftUIIntrospect-Static";
-		};
 		EA3EA1202BB5E3F800A02C69 /* Pow */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = EA3EA11F2BB5E3F700A02C69 /* XCRemoteSwiftPackageReference "Pow" */;
