@@ -14,8 +14,6 @@ enum PostVisibility: CaseIterable {
     case followers
     case specificPeople
     
-    /// The raw string value that your backend or Mastodon-like server expects.
-    /// (Mastodon: "public", "unlisted", "private", "direct")
     var mastodonRawValue: String {
         switch self {
         case .public:
@@ -29,8 +27,6 @@ enum PostVisibility: CaseIterable {
         }
     }
     
-    /// An optional reverse initializer, if you ever receive a raw string from the server
-    /// and want to convert it back to `PostVisibility`.
     init?(fromRawValue raw: String) {
         switch raw {
         case "public":   self = .public
