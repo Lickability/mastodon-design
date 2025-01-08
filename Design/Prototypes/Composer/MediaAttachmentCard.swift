@@ -14,13 +14,6 @@ struct MediaAttachmentCard: View {
     private var altTextIsEmpty: Bool {
         attachment?.altText?.isEmpty ?? true
     }
-    private var altTextWarningColor: Color {
-        if #available(iOS 18.0, *) {
-            return .orange.mix(with: .red, by: 0.3)
-        } else {
-            return .orange
-        }
-    }
     
     var body: some View {
         ZStack {
@@ -48,13 +41,13 @@ struct MediaAttachmentCard: View {
                                             .accessibilityHidden(true)
                                     }
                                     Text("Alt")
+                                        .textCase(.uppercase)
                                 }
                             }
                             .imageScale(.small)
-                            .textCase(.uppercase)
                             .fontWeight(.heavy)
-                            .foregroundStyle(altTextIsEmpty ? .black : .white)
-                            .tint(altTextIsEmpty ? AnyShapeStyle(altTextWarningColor.gradient) : AnyShapeStyle(.black.opacity(0.8)))
+                            .foregroundStyle(.white)
+                            .tint(altTextIsEmpty ? AnyShapeStyle(.pink.gradient) : AnyShapeStyle(.black.opacity(0.8)))
                             .controlSize(.small)
                             .buttonStyle(.borderedProminent)
                             .buttonBorderShape(.roundedRectangle)
@@ -93,7 +86,7 @@ struct MediaAttachmentCard: View {
     }
 }
 
-#Preview {
+#Preview(traits: .sizeThatFitsLayout) {
     @Previewable @State var attachment = SampleData.sampleMediaAttachments[1]
     
     MediaAttachmentCard(attachment: attachment, onAltTextToggle: { updatedAttachment in
