@@ -42,15 +42,15 @@ enum PostVisibility: CaseIterable {
         }
     }
     
-    /// SF Symbol name, or any icon you'd like to use in the UI
+    /// SF Symbol name
     var icon: String {
         switch self {
         case .public:
             return "globe"
         case .quietPublic:
-            return "globe.americas.fill"
+            return "moon.fill"
         case .followers:
-            return "person.2.fill"
+            return "lock.fill"
         case .specificPeople:
             return "at"
         }
